@@ -45,3 +45,35 @@ const myDiv = <div className="big">I AM A BIG DIV</div>;
 
 // To execute as js use {}
 const js = <h1>{2 + 3}</h1>;
+
+//.map in JSX
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const people = ['Rowe', 'Prevost', 'Gare'];
+
+const peopleLis = people.map(person =>
+  <li>{person}</li>
+);
+
+ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
+
+// add keys to each person (it's like an id)
+const peopleList = people.map((person, i) =>
+  // expression goes here:
+  <li key={'person_' + i}>{person}</li>
+);
+
+
+// The following JSX expression:
+
+const h1Jsx = <h1>Hello world</h1>;
+
+// can be rewritten without JSX, like this:
+
+const h1 = React.createElement(
+  "h1",
+  null,
+  "Hello world"
+);
