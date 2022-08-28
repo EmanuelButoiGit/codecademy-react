@@ -1,6 +1,7 @@
 # codecademy-react
 
-Codecademy react course summary. <br><br>
+Codecademy react course summary. 
+
 https://www.codecademy.com/learn/react-101
 
 
